@@ -94,26 +94,27 @@ class ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    lazy var transitionAnimated: CATransition = {
+    lazy var transitionAnimation: CATransition = {
        let tran = CATransition()
         tran.startProgress = 0.0
         tran.endProgress = 1.0
-        tran.type = kCATransitionPush
-        tran.subtype = kCATransitionFromRight
+        tran.type = "cube"
         tran.duration = 1.0
         
         return tran
     }()
     
-    @IBAction func backToTransitingView(_ sender: UIButton) {        
-        transitingView.layer.add(transitionAnimated, forKey: "transition")
-        transitedView.layer.add(transitionAnimated, forKey: "transition")
+    @IBAction func backToTransitingView(_ sender: UIButton) {
+        transitionAnimation.subtype = kCATransitionFromLeft
+        transitingView.layer.add(transitionAnimation, forKey: "transition")
+        transitedView.layer.add(transitionAnimation, forKey: "transition")
         view = transitingView
     }
     
     @IBAction func changeToTransitedView(_ sender: UIButton) {
-        transitingView.layer.add(transitionAnimated, forKey: "transition")
-        transitedView.layer.add(transitionAnimated, forKey: "transition")
+        transitionAnimation.subtype = kCATransitionFromRight
+        transitingView.layer.add(transitionAnimation, forKey: "transition")
+        transitedView.layer.add(transitionAnimation, forKey: "transition")
         view = transitedView
     }
     
