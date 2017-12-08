@@ -16,6 +16,8 @@
 		849C2B1C1FCBE643009DF18A /* MyCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C2B1B1FCBE643009DF18A /* MyCustomLayout.swift */; };
 		849C2B1E1FCBEC2B009DF18A /* MyCustomAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C2B1D1FCBEC2B009DF18A /* MyCustomAttributes.swift */; };
 		84AB56911FDAD3730049A52B /* TransitedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AB56901FDAD3730049A52B /* TransitedView.xib */; };
+		84AB56931FDAE9370049A52B /* TransitingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AB56921FDAE9370049A52B /* TransitingView.xib */; };
+		84AB56951FDAEBB40049A52B /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB56941FDAEBB40049A52B /* TransitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		849C2B1B1FCBE643009DF18A /* MyCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomLayout.swift; sourceTree = "<group>"; };
 		849C2B1D1FCBEC2B009DF18A /* MyCustomAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomAttributes.swift; sourceTree = "<group>"; };
 		84AB56901FDAD3730049A52B /* TransitedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitedView.xib; sourceTree = "<group>"; };
+		84AB56921FDAE9370049A52B /* TransitingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitingView.xib; sourceTree = "<group>"; };
+		84AB56941FDAEBB40049A52B /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +70,11 @@
 				849C2B1B1FCBE643009DF18A /* MyCustomLayout.swift */,
 				849C2B1D1FCBEC2B009DF18A /* MyCustomAttributes.swift */,
 				849C2B071FCBE5A0009DF18A /* ViewController.swift */,
+				84AB56941FDAEBB40049A52B /* TransitionViewController.swift */,
 				849C2B091FCBE5A0009DF18A /* Main.storyboard */,
 				8433D6071FD2950800B7B222 /* TransformView.swift */,
 				84AB56901FDAD3730049A52B /* TransitedView.xib */,
+				84AB56921FDAE9370049A52B /* TransitingView.xib */,
 			);
 			path = CustomLayout;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 				84AB56911FDAD3730049A52B /* TransitedView.xib in Resources */,
 				849C2B101FCBE5A0009DF18A /* LaunchScreen.storyboard in Resources */,
 				849C2B0D1FCBE5A0009DF18A /* Assets.xcassets in Resources */,
+				84AB56931FDAE9370049A52B /* TransitingView.xib in Resources */,
 				849C2B0B1FCBE5A0009DF18A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849C2B081FCBE5A0009DF18A /* ViewController.swift in Sources */,
+				84AB56951FDAEBB40049A52B /* TransitionViewController.swift in Sources */,
 				849C2B1C1FCBE643009DF18A /* MyCustomLayout.swift in Sources */,
 				849C2B061FCBE5A0009DF18A /* AppDelegate.swift in Sources */,
 				8433D6081FD2950800B7B222 /* TransformView.swift in Sources */,

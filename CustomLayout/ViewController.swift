@@ -13,11 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var view1: UILabel!
     @IBOutlet weak var view2: UILabel!
     @IBOutlet weak var layerView: UILabel!
-    @IBOutlet var transitedView: UIView!
-    @IBOutlet var transitingView: UIView!
     
     override func viewDidLoad() {
-        Bundle.main.loadNibNamed("TransitedView", owner: self, options: nil)
         
         view1.layer.masksToBounds = true
         view.layer.cornerRadius = 2.0
@@ -92,30 +89,6 @@ class ViewController: UIViewController {
     @objc
     func back(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    lazy var transitionAnimation: CATransition = {
-       let tran = CATransition()
-        tran.startProgress = 0.0
-        tran.endProgress = 1.0
-        tran.type = "cube"
-        tran.duration = 1.0
-        
-        return tran
-    }()
-    
-    @IBAction func backToTransitingView(_ sender: UIButton) {
-        transitionAnimation.subtype = kCATransitionFromLeft
-        transitingView.layer.add(transitionAnimation, forKey: "transition")
-        transitedView.layer.add(transitionAnimation, forKey: "transition")
-        view = transitingView
-    }
-    
-    @IBAction func changeToTransitedView(_ sender: UIButton) {
-        transitionAnimation.subtype = kCATransitionFromRight
-        transitingView.layer.add(transitionAnimation, forKey: "transition")
-        transitedView.layer.add(transitionAnimation, forKey: "transition")
-        view = transitedView
     }
     
 }
